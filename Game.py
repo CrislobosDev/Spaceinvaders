@@ -13,7 +13,6 @@ class Game(GameWorld):
 
         # agregamos a los actores
         SpaceShip(400, 540)
-        SpaceShip(480, 540)
         Alien(100, 50)
         Alien(200, 50)
         Alien(300, 50)
