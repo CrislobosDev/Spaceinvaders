@@ -1,5 +1,4 @@
-# VSCODE
-# File -> Preferences -> Settings: Buscar y Marcar "Python: Execute In File Dir"
+
 
 from MiniGameEngine import GameWorld
 from SpaceShip import SpaceShip
@@ -27,7 +26,6 @@ class Game(GameWorld):
         if self.isPressed("Escape"):
             self.exitGame()
 
-
-# -- show time
+    
 game = Game()
 game.gameLoop(60)

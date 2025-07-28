@@ -27,6 +27,17 @@ class SpaceShip(GameObject):
                 x = ww - w / 2
         self.setPosition(x, y)
 
+        # movimiento vertical
+        if self.isPressed("Up"): # movimiento hacia arriba al presionar "Up"
+            y = y - 4 
+            if y - w / 2 < 0:
+                y = w / 2
+        elif self.isPressed("Down"): # movimiento hacia abajo al presionar "Down"
+            y = y + 4
+            if y > ww - w / 2:
+                y = ww - w / 2
+        self.setPosition(x, y) # actualizamos la posición de la nave
+
         # disparamos una bala
         if self.isPressed("space"):
             if time.time() - self.lastBullet > 0.3:
