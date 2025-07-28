@@ -26,6 +26,10 @@ class Game(GameWorld):
         if self.isPressed("Escape"):
             self.exitGame()
 
+    def colision(self, spaceShip, alien):
+        if spaceShip.getTipo() == "SpaceShip" and alien.getTipo() == "Alien":
+            print("Colisión detectada entre la nave espacial y el alien.")
+            # Aquí puedes agregar lógica adicional para manejar la colisión
     
 game = Game()
 game.gameLoop(60)

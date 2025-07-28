@@ -1,6 +1,7 @@
 import time
 from MiniGameEngine import GameObject
 from Bullet import Bullet
+from Alien import Alien
 
 
 class SpaceShip(GameObject):
@@ -43,3 +44,9 @@ class SpaceShip(GameObject):
             if time.time() - self.lastBullet > 0.3:
                 Bullet(x, y - 30)
                 self.lastBullet = time.time()
+
+    def onCollision(self, dt, Alien):
+        if Alien.getTipo() == "Alien":
+            self.destroy()
+            print("Game Over: La nave espacial ha sido destruida.")
+            
